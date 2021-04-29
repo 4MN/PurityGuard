@@ -2,7 +2,7 @@
 Discord bot for checking steam bans for Para Bellum clan discord
 
 ____
-## Commands list:
+# Commands list:
 
 "Leader" or "Team Officer" role required:
 - !check_all - checking all people from DB and posting a report in report channel
