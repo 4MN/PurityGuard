@@ -1,5 +1,5 @@
 # PurityGuard
-Discord bot for checking steam bans
+Discord bot for checking steam bans for Para Bellum clan discord
 
 ____
 Commands list:
