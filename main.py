@@ -72,7 +72,7 @@ async def on_message(message):
 
 #format: steamId -> [name(str), gameBansCount(int), lastBanDaysAgo(int)]
 @bot.command(name="make_db")
-@commands.has_role("Leader")
+@commands.has_role("Developer")
 async def make_db_from_history(ctx):
     joinChannel = GetChannel(joinChanId)
 
@@ -97,7 +97,7 @@ cached_check = discord.Embed()
 
 
 @bot.command(name="check_all")
-@commands.has_any_role("Leader", "Team Officer")
+@commands.has_any_role("Leader", "Team Officer", "Developer")
 async def check_all(ctx):
     file = open("data.json", "r", encoding="utf-8")
     data = json.load(file)
@@ -117,7 +117,7 @@ async def check_all(ctx):
 
 
 @bot.command(name="last_check")
-@commands.has_any_role("Leader", "Team Officer")
+@commands.has_any_role("Leader", "Team Officer", "Developer")
 async def last_check(ctx):
     global cached_check
     if not cached_check.title:
