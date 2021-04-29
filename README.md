@@ -1,15 +1,6 @@
 # PurityGuard
 Discord bot for checking steam bans for Para Bellum clan discord
 
-## Installation(developers)
-____
-```
-git clone https://github.com/4MN/PurityGuard.git
-cd PurityGuard
-pip install -r requirements.txt
-```
-- copy into directory your .env file
-- copy into directory your data.json file(or use existing one)
 ____
 ## Commands list:
 
@@ -19,3 +10,26 @@ ____
 
 "Developer" role required:
 - !make_db - fetch all messsages from join channel, find their steamid64 and add they to DB
+
+____
+# For developers
+____
+## Installation
+```
+git clone https://github.com/4MN/PurityGuard.git
+cd PurityGuard
+pip install -r requirements.txt
+```
+- copy into directory your .env file
+- copy into directory your data.json file(or use existing one)
+
+## Updating
+
+- save copy of your data.json file somewhere
+
+```
+cd PurityGuard
+git pull https://github.com/4MN/PurityGuard.git
+```
+
+- replace default data.json with your
