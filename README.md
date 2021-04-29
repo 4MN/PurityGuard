@@ -11,7 +11,7 @@ pip install -r requirements.txt
 - copy into directory your .env file
 - copy into directory your data.json file
 ____
-Commands list:
+## Commands list:
 
 "Leader" or "Team Officer" role required:
 - !check_all - checking all people from DB and posting a report in report channel
