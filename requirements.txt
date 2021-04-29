@@ -1,0 +1,6 @@
+discord.py==1.7.1
+aiocron==1.4
+requests==2.25.1
+beautifulsoup4==4.9.3
+discord==1.0.1
+python-dotenv==0.17.0
