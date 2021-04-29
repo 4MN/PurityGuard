@@ -1,7 +1,7 @@
 # PurityGuard
 Discord bot for checking steam bans for Para Bellum clan discord
 
-## Installation
+## Installation(developers)
 ____
 ```
 git clone https://github.com/4MN/PurityGuard.git
