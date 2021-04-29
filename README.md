@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 - save copy of your data.json file somewhere
 
--get last version of the sources
+- get last version of the sources
 ```
 cd PurityGuard
 git pull https://github.com/4MN/PurityGuard.git
