@@ -9,7 +9,7 @@ cd PurityGuard
 pip install -r requirements.txt
 ```
 - copy into directory your .env file
-- copy into directory your data.json file
+- copy into directory your data.json file(or use existing one)
 ____
 ## Commands list:
 
