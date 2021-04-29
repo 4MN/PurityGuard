@@ -1,6 +1,7 @@
 # PurityGuard
 Discord bot for checking steam bans
 
+____
 Commands list:
 
 "Leader" or "Team Officer" role required:
