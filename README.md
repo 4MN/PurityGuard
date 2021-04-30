@@ -1,7 +1,6 @@
 # PurityGuard
 Discord bot for checking steam bans for Para Bellum clan discord
 
-____
 # Commands list:
 
 "Leader" or "Team Officer" role required:
@@ -11,9 +10,7 @@ ____
 "Developer" role required:
 - !make_db - fetch all messsages from join channel, find their steamid64 and add they to DB
 
-____
 # For developers
-____
 ## Installation
 ```
 git clone https://github.com/4MN/PurityGuard.git
