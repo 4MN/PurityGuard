@@ -10,6 +10,12 @@ pattern = re.compile(r'\d{17}')
 #re pattern for clear messages from mentions
 mentDelPattern = re.compile(r'[@#](everyone|here|[!&]?[0-9]{17,20})')
 
+def IsUserInDB(id):
+		file = open("data.json", "r", encoding="utf-8")
+		existingData = json.load(file)
+		file.close()
+
+		return id in existingData
 
 async def FindSteamId(dMessage, isRaiseExc=False):
     cleanContent = re.sub(mentDelPattern, "", dMessage.content)

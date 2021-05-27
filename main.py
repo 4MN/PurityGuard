@@ -56,19 +56,26 @@ async def on_command_error(ctx, error):
 
 @bot.event
 async def on_message(message):
-    if message.author == bot.user:
-        return
+		if message.author == bot.user:
+				return
 
-    if message.channel.id == joinChanId and not message.content.startswith(
-            "!"):
-        userRecord = u.GetUserRecord(await u.FindSteamId(message, True))
-        embed = u.GetSuccessEmbed("New member report")
-        u.AddUserInEmbed(embed, userRecord)
-        u.AddUserInDB(userRecord)
-        await repChanCont.send(embed=embed)
+		if message.channel.id == joinChanId and not message.content.startswith("!"):
+				id = await u.FindSteamId(message, True)
+				if (u.IsUserInDB(id)):
+						embed = u.GetSuccessEmbed("i'm too lazy :yawning_face:", "User already exists in DB\n I will not check him")
+				else:
+						userRecord = u.GetUserRecord(id)
+						embed = u.GetSuccessEmbed("New member report")
+						u.AddUserInEmbed(embed, userRecord)
+						u.AddUserInDB(userRecord)
+				await repChanCont.send(embed=embed)
 
-    await bot.process_commands(message)
+		await bot.process_commands(message)
 
+@bot.event
+async def on_message_edit(before, after):
+    if after.channel.id == joinChanId and before.content != after.content:
+        await bot.on_message(after)
 
 #format: steamId -> [name(str), gameBansCount(int), lastBanDaysAgo(int)]
 @bot.command(name="make_db")
